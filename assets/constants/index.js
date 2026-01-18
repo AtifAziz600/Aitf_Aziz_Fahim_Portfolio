@@ -4,6 +4,10 @@ const navLinks = [
     link: "#work",
   },
   {
+    name: "About Me",
+    link: "#aboutme",
+  },
+  {
     name: "Experience",
     link: "#experience",
   },
@@ -11,10 +15,7 @@ const navLinks = [
     name: "Skills",
     link: "#skills",
   },
-  {
-    name: "Testimonials",
-    link: "#testimonials",
-  },
+
 ];
 
 const words = [
@@ -31,8 +32,8 @@ const words = [
 const counterItems = [
   { value: 1, suffix: "+", label: "Years of Job Experience" },
   { value: 10, suffix: "+", label: "Projects Completed" },
-  { value: 5, suffix: "+", label: "Technologies Used" },
-  { value: 5, suffix: "+", label: "Frameworks Learned" },
+  { value: 10, suffix: "+", label: "Technologies Used" },
+  { value: 6, suffix: "+", label: "Frameworks Learned" },
 ];
 
 
@@ -151,42 +152,52 @@ const techStackIcons = [
 
 const expCards = [
   {
-    review: "Adrian brought creativity and technical expertise to the team, significantly improving our frontend performance. His work has been invaluable in delivering faster experiences.",
+    review:
+      "Delivered scalable, secure web applications using modern frontend and backend technologies. Strong focus on performance, clean architecture, and real-world problem solving.",
     imgPath: "/images/exp1.png",
     logoPath: "/images/logo1.png",
-    title: "Frontend Developer",
-    date: "January 2023 - Present",
+    title: "Full Stack Web Developer",
+    date: "January 2023 – Present",
     responsibilities: [
-      "Developed and maintained user-facing features for the Hostinger website.",
-      "Collaborated closely with UI/UX designers to ensure seamless user experiences.",
-      "Optimized web applications for maximum speed and scalability.",
+      "Built full-stack applications using Laravel, Vue.js, Nuxt, React, and Next.js.",
+      "Designed RESTful APIs with Laravel and Node.js (Express).",
+      "Implemented authentication using JWT, OAuth, and Appwrite Auth.",
+      "Integrated MongoDB and MySQL databases with secure data handling.",
+      "Deployed and managed applications using cPanel and shared/VPS hosting.",
     ],
   },
   {
-    review: "Adrian’s contributions to Docker's web applications have been outstanding. He approaches challenges with a problem-solving mindset.",
+    review:
+      "Contributed to building real-time, interactive applications with a strong emphasis on reliability, maintainability, and scalable backend architecture.",
     imgPath: "/images/exp2.png",
     logoPath: "/images/logo2.png",
-    title: "Full Stack Developer",
-    date: "June 2020 - December 2023",
+    title: "Backend & Realtime Application Developer",
+    date: "June 2023 – Present",
     responsibilities: [
-      "Led the development of Docker's web applications, focusing on scalability.",
-      "Worked with backend engineers to integrate APIs seamlessly with the frontend.",
-      "Contributed to open-source projects that were used with the Docker ecosystem.",
+      "Developed backend services using Node.js, Express, and Laravel.",
+      "Implemented real-time features using Socket.IO for chats and notifications.",
+      "Handled secure authentication and authorization using JWT and OAuth.",
+      "Optimized database queries and API performance for production use.",
+      "Collaborated with frontend teams to ensure smooth API integration.",
     ],
   },
   {
-    review: "Adrian’s work on Appwrite’s mobile app brought a high level of quality and efficiency. He delivered solutions that enhanced our mobile experience & meet our product goals.",
+    review:
+      "Delivered cross-platform mobile applications with consistent performance and seamless backend integration.",
     imgPath: "/images/exp3.png",
     logoPath: "/images/logo3.png",
-    title: "React Native Developer",
-    date: "March 2019 - May 2020",
+    title: "Mobile Application Developer",
+    date: "March 2024 – Present",
     responsibilities: [
-      "Built cross-platform mobile apps using React Native, integrating with Appwrite's backend services.",
-      "Improved app performance and user experience through code optimization and testing.",
-      "Coordinated with the product team to implement features based on feedback.",
+      "Built cross-platform mobile applications using React Native and Flutter.",
+      "Integrated Appwrite for authentication, storage, and backend services.",
+      "Connected mobile apps with REST APIs and real-time services.",
+      "Improved performance, responsiveness, and user experience through testing and optimization.",
+      "Worked closely with stakeholders to implement feature requirements.",
     ],
   },
 ];
+
 
 const expLogos = [
   {
