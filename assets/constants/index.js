@@ -5,7 +5,7 @@ const navLinks = [
   },
   {
     name: "About Me",
-    link: "#aboutme",
+    link: "#about",
   },
   {
     name: "Experience",

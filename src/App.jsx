@@ -7,17 +7,21 @@ import FeatureCards from './sections/FeatureCards'
 import AboutMe from './sections/AboutMe'
 import Experience from './sections/Experience'
 import Footer from './sections/Footer'
+import TechStack from './sections/TechStack'
+import Contacts from './sections/Contacts'
 
 const App = () => {
   return (
     <>
     <Navbar/>
     <Hero/>
+    <AboutMe/>
     <ShowcaseSection/>
     <LogoShowcase/>
-    <AboutMe/>
     <FeatureCards/>
     <Experience/>
+    <TechStack/>
+    <Contacts/>
     <Footer/>
     </>
   )
