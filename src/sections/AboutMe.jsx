@@ -7,23 +7,40 @@ import {
   FaTwitter,
   FaInstagram,
   FaLinkedinIn,
+  FaDownload,
 } from "react-icons/fa";
 
 gsap.registerPlugin(ScrollTrigger);
+
+const stats = [
+  { value: "6+", label: "Months Experience" },
+  { value: "10+", label: "Projects Built" },
+  { value: "5+", label: "Technologies" },
+];
+
+const socialLinks = [
+  { href: "https://github.com/AtifAziz600", icon: <FaGithub />, label: "GitHub" },
+  { href: "https://www.linkedin.com/in/atif-aziz-916424336/", icon: <FaLinkedinIn />, label: "LinkedIn" },
+  { href: "#", icon: <FaTwitter />, label: "Twitter" },
+  { href: "#", icon: <FaInstagram />, label: "Instagram" },
+];
 
 const AboutMe = () => {
   const sectionRef = useRef(null);
   const imageRef = useRef(null);
   const contentRef = useRef(null);
+  const statsRef = useRef(null);
 
   useGSAP(() => {
     gsap.fromTo(
       imageRef.current,
-      { x: -50, opacity: 0 },
+      { x: -60, opacity: 0, scale: 0.95 },
       {
         x: 0,
         opacity: 1,
-        duration: 1,
+        scale: 1,
+        duration: 1.1,
+        ease: "power3.out",
         scrollTrigger: {
           trigger: sectionRef.current,
           start: "top bottom-=100",
@@ -34,12 +51,13 @@ const AboutMe = () => {
 
     gsap.fromTo(
       contentRef.current,
-      { x: 50, opacity: 0 },
+      { x: 60, opacity: 0 },
       {
         x: 0,
         opacity: 1,
-        duration: 1,
+        duration: 1.1,
         delay: 0.2,
+        ease: "power3.out",
         scrollTrigger: {
           trigger: sectionRef.current,
           start: "top bottom-=100",
@@ -47,79 +65,123 @@ const AboutMe = () => {
         },
       }
     );
+
+    gsap.fromTo(
+      ".about-stat",
+      { y: 30, opacity: 0 },
+      {
+        y: 0,
+        opacity: 1,
+        stagger: 0.15,
+        duration: 0.8,
+        delay: 0.4,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: sectionRef.current,
+          start: "top bottom-=80",
+          toggleActions: "play none none reverse",
+        },
+      }
+    );
   }, []);
 
   return (
-    <section ref={sectionRef} className="section-padding my-10" id="about">
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+    <section ref={sectionRef} className="about-section section-padding my-10" id="about">
+      {/* Background decorative blobs */}
+      <div className="about-blob about-blob-1" />
+      <div className="about-blob about-blob-2" />
 
-        {/* Left Image */}
-        <div ref={imageRef} className="flex justify-center">
-          <img
-            src="/images/me.jpg" 
-            alt="Md. Atif Aziz"
-            className="w-full max-w-sm rounded-lg object-cover shadow-lg border border-black-50"
-          />
-        </div>
+      <div className="max-w-6xl mx-auto relative z-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-14 items-center">
 
-        {/* Right Content */}
-        <div ref={contentRef}>
-          <h2 className="text-4xl font-bold text-white mb-3">
-            ABOUT ME
-          </h2>
+          {/* ── Left: Image Column ── */}
+          <div ref={imageRef} className="about-image-col">
+            <div className="about-image-frame">
+              {/* Decorative ring */}
+              <div className="about-ring" />
+              {/* Glow behind image */}
+              <div className="about-glow" />
+              <img
+                src="/images/me.jpeg"
+                alt="Md. Atif Aziz"
+                className="about-photo"
+              />
+              {/* Floating badge */}
+              <div className="about-badge">
+                <span className="about-badge-dot" />
+                Available for work
+              </div>
+            </div>
 
-          <p className="text-sm font-semibold text-blue-50 uppercase mb-5">
-            Md. Atif Aziz – Frontend Developer Intern
-          </p>
-
-          <p className="text-white-50 leading-relaxed mb-8">
-            I am an aspiring Full-Stack Developer with a strong foundation in
-            frontend development, specializing in React.js, Tailwind CSS, and
-            JavaScript. I have completed a 6-month internship where I worked on
-            real-world projects such as LMS platforms, healthcare systems, and
-            web dashboards.
-            <br /><br />
-            Currently, I am expanding my backend skills with Node.js and REST
-            APIs while continuously improving my problem-solving and UI/UX
-            development abilities. I am passionate about building responsive,
-            user-friendly applications and eager to grow as a professional
-            software engineer.
-          </p>
-
-          {/* Social Icons */}
-          <div className="flex items-center gap-5 text-white-50 text-xl">
-            <a
-              href="https://github.com/AtifAziz600"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-white transition"
-            >
-              <FaGithub />
-            </a>
-
-            <a
-              href="https://www.linkedin.com/in/atif-aziz-916424336/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-white transition"
-            >
-              <FaLinkedinIn />
-            </a>
-
-            <a
-              href="#"
-              className="hover:text-white transition"
-            >
-              <FaTwitter />
-            </a>
-
-            <a
-              href="#"
-              className="hover:text-white transition"
-            >
-              <FaInstagram />
-            </a>
+            {/* Stats row below image */}
+            <div ref={statsRef} className="about-stats">
+              {stats.map(({ value, label }) => (
+                <div key={label} className="about-stat">
+                  <span className="about-stat-value">{value}</span>
+                  <span className="about-stat-label">{label}</span>
+                </div>
+              ))}
+            </div>
           </div>
+
+          {/* ── Right: Content Column ── */}
+          <div ref={contentRef} className="about-content">
+            {/* Tag */}
+            <span className="about-tag">Who I am</span>
+
+            <h2 className="about-heading">
+              About <span className="about-heading-accent">Me</span>
+            </h2>
+
+            <p className="about-role">
+              Md. Atif Aziz — Frontend Developer Intern
+            </p>
+
+            <p className="about-bio">
+              I'm an aspiring <strong>Full-Stack Developer</strong> with a strong
+              foundation in frontend development, specializing in{" "}
+              <strong>React.js</strong>, <strong>Tailwind CSS</strong>, and{" "}
+              <strong>JavaScript</strong>.
+            </p>
+            <p className="about-bio">
+              I completed a <strong>6-month internship</strong> building real-world
+              projects — including LMS platforms, healthcare systems, and web
+              dashboards. Currently expanding my backend skills with{" "}
+              <strong>Node.js</strong> and REST APIs while crafting responsive,
+              user-friendly experiences.
+            </p>
+
+            {/* Skills pills */}
+            <div className="about-skills">
+              {["React.js", "Tailwind CSS", "JavaScript", "Node.js", "REST APIs", "Git"].map((skill) => (
+                <span key={skill} className="about-skill-pill">{skill}</span>
+              ))}
+            </div>
+
+            {/* CTA + Socials */}
+            <div className="about-actions">
+              <a href="/images/MD_ATIF_AZIZ CV.pdf" download className="about-download-btn">
+                <FaDownload />
+                Download CV
+              </a>
+
+              <div className="about-socials">
+                {socialLinks.map(({ href, icon, label }) => (
+                  <a
+                    key={label}
+                    href={href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={label}
+                    className="about-social-icon"
+                  >
+                    {icon}
+                  </a>
+                ))}
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
