@@ -201,7 +201,7 @@ const ShowcaseSection = () => {
                   className="w-full h-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#121217] via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity duration-300" />
-                
+
                 {/* Overlay Button on Hover */}
                 <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/40 backdrop-blur-[2px]">
                   <span className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-blue-600 text-white font-medium text-sm shadow-lg shadow-blue-600/50 transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">

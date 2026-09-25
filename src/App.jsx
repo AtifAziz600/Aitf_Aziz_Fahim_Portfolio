@@ -13,16 +13,16 @@ import Contacts from './sections/Contacts'
 const App = () => {
   return (
     <>
-    <Navbar/>
-    <Hero/>
-    <AboutMe/>
-    <ShowcaseSection/>
-    <LogoShowcase/>
-    <FeatureCards/>
-    <Experience/>
-    <TechStack/>
-    <Contacts/>
-    <Footer/>
+      <Navbar />
+      <Hero />
+      <AboutMe />
+      <ShowcaseSection />
+      <LogoShowcase />
+      <FeatureCards />
+      <Experience />
+      <TechStack />
+      <Contacts />
+      <Footer />
     </>
   )
 }

@@ -13,9 +13,9 @@ import {
 gsap.registerPlugin(ScrollTrigger);
 
 const stats = [
-  { value: "6+", label: "Months Experience" },
-  { value: "10+", label: "Projects Built" },
-  { value: "5+", label: "Technologies" },
+  { value: "1.5+", label: "Years Experience" },
+  { value: "8+", label: "Projects Built" },
+  { value: "15+", label: "Technologies" },
 ];
 
 const socialLinks = [
@@ -153,14 +153,14 @@ const AboutMe = () => {
 
             {/* Skills pills */}
             <div className="about-skills">
-              {["React.js", "Tailwind CSS", "JavaScript", "Node.js", "REST APIs", "Git"].map((skill) => (
+              {["React.js", "Next.js", "Vue.js / Nuxt", "Laravel", "Node.js", "TypeScript", "Tailwind CSS", "REST APIs", "Git"].map((skill) => (
                 <span key={skill} className="about-skill-pill">{skill}</span>
               ))}
             </div>
 
             {/* CTA + Socials */}
             <div className="about-actions">
-              <a href="/images/MD_ATIF_AZIZ CV.pdf" download className="about-download-btn">
+              <a href="/images/MD_ATIF_AZIZ CV.pdf" download="MD_Atif_Aziz_CV.pdf" className="about-download-btn">
                 <FaDownload />
                 Download CV
               </a>
