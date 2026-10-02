@@ -95,6 +95,17 @@ const projects = [
     tags: ["React", "Rental Platform", "TailwindCSS", "Stripe"],
     accentColor: "#2563eb",
   },
+    {
+    id: 9,
+    title: "Horizon - Secure Digital Banking Platform",
+    category: "FinTech / Banking Application",
+    description:
+      "A secure digital banking platform featuring authenticated sign-in flows, responsive account dashboards, and clean modern financial UI built for a trustworthy user experience.",
+    image: "/images/Bankapp.png",
+    link: "https://bankapp-sigma.vercel.app/",
+    tags: ["React", "Authentication", "FinTech", "Responsive UI"],
+    accentColor: "#10b981",
+  },
 ];
 
 const ShowcaseSection = () => {
